@@ -79,13 +79,13 @@ Thredded.layout = 'application'
 # ==> Email Configuration
 # Email "From:" field will use the following
 # (this is also used as the "To" address for both email notifcations, as all the recipients are on bcc)
-# Thredded.email_from = 'no-reply@example.com'
+Thredded.email_from = %("#{I18n.t('brand.name')}" <#{Settings.email_sender}>)
 
 # Emails going out will prefix the "Subject:" with the following string
 # Thredded.email_outgoing_prefix = '[My Forum] '
 #
 # The parent mailer for all Thredded mailers
-# Thredded.parent_mailer = 'ActionMailer::Base'
+Thredded.parent_mailer = 'ApplicationMailer'
 
 # ==> Model configuration
 # The range of valid messageboard name lengths. Default:
