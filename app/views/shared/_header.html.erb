@@ -9,7 +9,8 @@
         <%= link_to t('nav.sign_in'), main_app.new_user_session_path %>
     <% end %>
   </span>
-  <a class="app-nav-logo" href="/"><%= t 'brand.name' %></a>
+  <%= link_to image_tag("italiaauto.jpg", style: 'height:30px; width:auto;' ), root_path, class: "app-nav-logo" %>
+
   <div class="app-nav-theme">
     <span class="app-nav-text"><%= t 'nav.theme' %>:</span>
     <ul>
