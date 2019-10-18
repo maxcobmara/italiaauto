@@ -7,11 +7,11 @@
 
   <table class="icongrid">
     <tr>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-tumblr-square fa-5x') + ""), "https://italiaauto.tumblr.com", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Tumblr" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-facebook fa-5x') + ""), "https://www.facebook.com/ItaliaAutoClub/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Facebook" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-instagram fa-5x') + ""), "https://www.instagram.com/italiaauto_my/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Instgram" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fas fa-newspaper fa-5x') + ""), "#"  %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-rebel fa-5x') + ""), thredded.root_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Forum" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-rebel fa-3x') + ""), thredded.root_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Forum" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-tumblr-square fa-3x') + ""), "https://italiaauto.tumblr.com", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Tumblr" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-facebook fa-3x') + ""), "https://www.facebook.com/ItaliaAutoClub/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Facebook" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-instagram fa-3x') + ""), "https://www.instagram.com/italiaauto_my/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Instgram" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fas fa-newspaper fa-3x') + ""), "#"  %></td>
     </tr>
   </table>
 
@@ -25,13 +25,14 @@
 </div>
 
 
-<h1>Welcome to your new Rails app with Thredded! 🎉</h1>
+
 
 <p>Check out the
   <b><%= link_to t('nav.forums'), thredded.root_path %></b>.
 </p>
 
 <% unless Rails.env.production? %>
+  <h1>Welcome to your new Rails app with Thredded! 🎉</h1>
   <p>You can now:</p>
 
   <ul>
