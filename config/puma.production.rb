@@ -28,3 +28,18 @@ end
 on_worker_boot do
   ActiveRecord::Base.establish_connection
 end
+
+bind  "unix:///var/www/italiaauto/shared/tmp/sockets/puma.sock"
+pidfile "/var/www/italiaauto/shared/tmp/pids/puma.pid"
+state_path "/var/www/italiaauto/shared/tmp/sockets/puma.state"
+directory "/var/www/italiaauto/current"
+
+workers 2
+threads 1,2
+
+daemonize true
+
+activate_control_app 'unix:///var/www/italiaauto/shared/tmp/sockets/pumactl.sock'
+prune_bundler
+
+plugin :tmp_restart
