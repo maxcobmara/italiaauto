@@ -33,5 +33,6 @@ production:
   <<: *defaults
   encoding: utf8
   min_messages: WARNING
-  url: <%= ENV['DATABASE_URL'].inspect if ENV['DATABASE_URL'] %>
-  database: <%= 'italiaauto_prod' unless ENV['DATABASE_URL'] %>
+  database: italiaauto_production
+  username: <%= Rails.application.credentials.db_prod_user %>
+  password: <%= Rails.application.credentials.db_prod_pass %>

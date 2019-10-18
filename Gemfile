@@ -67,3 +67,6 @@ gem 'invisible_captcha'
 gem 'rails-timeago'
 gem 'dalli'
 gem 'connection_pool'
+
+gem 'mina', require: false
+gem 'mina-puma', :require => false
