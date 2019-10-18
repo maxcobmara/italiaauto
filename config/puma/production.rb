@@ -20,14 +20,7 @@ end
 
 environment ENV.fetch('RACK_ENV', 'development')
 
-before_fork do
-  ::ActiveRecord::Base.connection_pool.disconnect!
-  ::I18n.backend.send(:init_translations) unless ::I18n.backend.initialized?
-end
 
-on_worker_boot do
-  ActiveRecord::Base.establish_connection
-end
 
 bind  "unix:///var/www/italiaauto/shared/tmp/sockets/puma.sock"
 pidfile "/var/www/italiaauto/shared/tmp/pids/puma.pid"
@@ -43,3 +36,13 @@ activate_control_app 'unix:///var/www/italiaauto/shared/tmp/sockets/pumactl.sock
 prune_bundler
 
 plugin :tmp_restart
+
+
+before_fork do
+  ::ActiveRecord::Base.connection_pool.disconnect!
+  ::I18n.backend.send(:init_translations) unless ::I18n.backend.initialized?
+end
+
+on_worker_boot do
+  ActiveRecord::Base.establish_connection
+end
