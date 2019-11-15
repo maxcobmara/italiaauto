@@ -1,19 +1,22 @@
 <div class="homepage">
   <div class="jumbotron"></div>
   <div class="main-text">
-    <h1>Italiaauto Club</h1>
+    <h1>ItaliaAuto Club</h1>
     <h4>The original italian car enthusiast club of Malaysia.</p>
   </div>
 
   <table class="icongrid">
     <tr>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-rebel fa-3x') + ""), thredded.root_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Forum" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-tumblr-square fa-3x') + ""), "https://italiaauto.tumblr.com", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Tumblr" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-facebook fa-3x') + ""), "https://www.facebook.com/ItaliaAutoClub/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Facebook" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fab fa-instagram fa-3x') + ""), "https://www.instagram.com/italiaauto_my/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Instgram" %></td>
-      <td><%= link_to (content_tag(:i, "", class: 'fas fa-newspaper fa-3x') + ""), "#"  %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-rebel fa-2x') + ""), thredded.root_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Forum" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-tumblr-square fa-2x') + ""), "https://italiaauto.tumblr.com", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Tumblr" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-facebook fa-2x') + ""), "https://www.facebook.com/ItaliaAutoClub/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Facebook" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fab fa-instagram fa-2x') + ""), "https://www.instagram.com/italiaauto_my/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Instgram" %></td>
+      <td><%= link_to (content_tag(:i, "", class: 'fas fa-newspaper fa-2x') + ""), "#"  %></td>
     </tr>
   </table>
+
+  <div id="pixlee_container"></div>
+  <script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'3q9LrAb9q9kJ9W-bMGOh'});Pixlee.addSimpleWidget({widgetId:'23220'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
 
   <div id="tumblrdiv">
     <iframe src="http://italiaauto.tumblr.com/archive" id='inneriframe' scrolling=no frameborder="0"></iframe>

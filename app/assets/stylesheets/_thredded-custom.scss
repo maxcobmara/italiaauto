@@ -31,23 +31,24 @@
   }
 
   .icongrid {
-    width: 100%; margin: 1em 1em; border-collapse:collapse;
+    width: 60%; margin-left:auto; margin-right:auto;
+    border-collapse:collapse;
   }
 
   /* Tumblr iframe */
   #tumblrdiv {
-    width:110%;
-    height:620px;
+    width:100%;
+    height:720px;
     overflow:hidden;
     position:relative;
     text-align: center;
-    margin-left: -1.5em;
+    margin: auto;
   }
 
   #inneriframe {
   position:absolute;
-  top:-100px; left: 0; right:0;
-  width:100%;
-  height:620px;
+  top:-100px; left: -35px; right:-35px;
+  width:110%;
+  height:720px;
   }
 }
