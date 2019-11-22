@@ -190,6 +190,7 @@ Thredded.parent_mailer = 'ApplicationMailer'
 
 Rails.application.config.to_prepare do
   Thredded::ApplicationController.module_eval do
+    before_action :thredded_require_login!
     rescue_from Thredded::Errors::LoginRequired do |exception|
       flash.now[:notice] = exception.message
       controller = Users::SessionsController.new
