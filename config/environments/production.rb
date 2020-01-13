@@ -65,6 +65,17 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "italiaauto.net",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: Rails.application.credentials.gmail_username,
+    password: Rails.application.credentials.gmail_password
+  }
+  config.action_mailer.default_url_options = { :host => 'italiaauto.net' }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -90,7 +101,7 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false  
+  config.active_record.dump_schema_after_migration = false
   # Set the default URL options for both Roadie and ActionMailer:
   config.roadie.url_options = config.action_mailer.default_url_options = {
     host: Settings.hostname,
