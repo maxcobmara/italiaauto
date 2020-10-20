@@ -23,6 +23,8 @@ defaults: &defaults
 development:
   <<: *defaults
   database: italiaauto_dev
+  username: postgres
+  password: maximum8
 
 test:
   <<: *defaults

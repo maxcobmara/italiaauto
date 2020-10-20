@@ -1,0 +1,1 @@
+pg_dump italiaauto_production > productiondb.sql
