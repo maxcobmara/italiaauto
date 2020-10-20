@@ -55,18 +55,20 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', groups: %i(test)
 gem 'capybara', groups: %i(test)
-gem 'config'
-gem 'simple_form'
-gem 'devise'
-gem 'devise-i18n'
-gem 'rails_email_preview'
-gem 'roadie-rails'
-gem 'plain-david'
-gem 'thredded'
-gem 'invisible_captcha'
-gem 'rails-timeago'
-gem 'dalli'
-gem 'connection_pool'
+gem 'config', '~> 2.0'
+gem 'simple_form', '~> 5.0.1'
+gem 'devise', '~> 4.7.1'
+gem 'devise-i18n', '~> 1.8.2'
+gem 'rails_email_preview', '~> 2.2.1'
+gem 'roadie-rails', '~> 2.1.0'
+gem 'plain-david', '~> 1.1.0'
+gem 'thredded', '~> 0.16.13'
+gem 'invisible_captcha', '~> 0.12.2'
+gem 'rails-timeago', '~> 2.17.1'
+gem 'dalli', '~> 2.7.10'
+gem 'connection_pool', '~> 2.2.2'
 
 gem 'mina', require: false
 gem 'mina-puma', :require => false
+
+gem 'seed_dump', '~> 3.3', '>= 3.3.1'
