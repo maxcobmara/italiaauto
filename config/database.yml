@@ -29,6 +29,8 @@ development:
 test:
   <<: *defaults
   database: italiaauto_test
+  username: postgres
+  password: maximum8
 
 
 production:

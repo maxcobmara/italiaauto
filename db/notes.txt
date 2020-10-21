@@ -1,1 +1,23 @@
-pg_dump italiaauto_production > productiondb.sql
+pg_dump -U ia_forum -h localhost italiaauto_production > productiondb.sql
+pg_dump --file "prod_db" --host "localhost" --username "ia_forum"  --format=c --blobs --data-only "italiaauto_production"
+
+
+cd /mnt/c/Users/"Yaacob Noor"/Rails/_db_back
+scp root@italiaauto:/var/www/italiaauto/current/db/seeds.rb ia_seeds.rb
+scp root@italiaauto:/var/www/italiaauto/current/db/productiondb.sql ia_productiondb.sql
+
+
+HEADS UP! i18n 1.1 changed fallbacks to exclude default locale.
+But that may break your application.
+
+If you are upgrading your Rails application from an older version of Rails:
+
+Please check your Rails app for 'config.i18n.fallbacks = true'.
+If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
+'config.i18n.fallbacks = [I18n.default_locale]'.
+If not, fallbacks will be broken in your app by I18n 1.1.x.
+
+If you are starting a NEW Rails application, you can ignore this notice.
+
+For more info see:
+https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
