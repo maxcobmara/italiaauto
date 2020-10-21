@@ -30,3 +30,16 @@ body {
   background-color: $brand-primary;
   height: 0.25rem;
 }
+
+.custom-select {
+  width: 35%;
+  height: 50px;
+  font-size: 90%;
+  cursor: pointer;
+  border-radius: 1;
+  background-color: #EEE;
+  border: none;
+  border-bottom: 2px solid #962d22;
+  color: black;
+  padding: 10px 10px 10px 30px;
+}

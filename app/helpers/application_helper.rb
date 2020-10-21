@@ -1,11 +1,11 @@
 module ApplicationHelper
   include ThemesHelper
-  
+
   def page_title
     safe_join [content_for(:page_title) || content_for(:thredded_page_title),
                t('brand.name')].compact, ' - '
   end
-  
+
   # @param datetime [DateTime]
   # @param default [String] a string to return if time is nil.
   # @return [String] html_safe datetime presentation
@@ -19,7 +19,7 @@ module ApplicationHelper
                 date_only: false,
                 default: default
   end
-  
+
   # Override the default timeago_tag_content from rails-timeago
   def timeago_tag_content(time, time_options = {})
     if time_options[:nojs] &&
@@ -28,5 +28,9 @@ module ApplicationHelper
     else
       I18n.l time.to_date, format: time_options[:format]
     end
+  end
+
+  def paypal_token
+    Rails.env.production? ? Rails.application.credentials.paypal_production : Rails.application.credentials.paypal_sandbox
   end
 end
