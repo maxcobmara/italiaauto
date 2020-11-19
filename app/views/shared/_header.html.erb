@@ -9,7 +9,7 @@
         <%= link_to t('nav.sign_in'), main_app.new_user_session_path %>
     <% end %>
   </span>
-  <%= link_to image_tag("IALogo2019.png", style: 'height:40px; width:auto;' ), root_path, class: "app-nav-logo" %>
+  <%= link_to image_tag("IALogo2019.png", style: 'height:40px; width:auto;' ), "/", class: "app-nav-logo" %>
 
   <div class="app-nav-theme">
     <span class="app-nav-text"><%= t 'nav.theme' %>:</span>
@@ -21,7 +21,7 @@
           <% else -%>
             <button type="button">
               <span class="app-nav-text"><%= theme_name %></span>
-              <span class="app-nav-icon"><%= inline_svg 'brightness.svg' %></span>
+              <span class="app-nav-icon"><%= inline_svg_tag 'brightness.svg' %></span>
             </button>
           <% end -%>
         <% end -%>

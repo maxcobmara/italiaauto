@@ -1,19 +1,17 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
   root to: 'home#show'
   scope path: 'admin' do
     authenticate :user, lambda { |u| u.admin? } do
       mount RailsEmailPreview::Engine, at: 'emails'
     end
   end
-  
 
-  devise_for :users,
-           skip: %i[sessions],
-           controllers: {
-             registrations: 'users/registrations',
-             sessions: 'users/sessions',
-           },
-           path_names: { sign_up: 'register' }
+  devise_for  :users, skip: %i[sessions],
+              controllers: {
+                registrations: 'users/registrations',
+                sessions: 'users/sessions',
+              },
+              path_names: { sign_up: 'register' }
 devise_scope :user do
   get 'sign-in', to: 'users/sessions#new', as: :new_user_session
   post 'sign-in', to: 'users/sessions#create', as: :user_session
