@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :chatrooms do
+    resource :chatroom_users
+    resources :messages
+  end
+
   root to: 'home#show'
   scope path: 'admin' do
     authenticate :user, lambda { |u| u.admin? } do

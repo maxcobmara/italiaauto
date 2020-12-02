@@ -1,0 +1,13 @@
+// Place all the styles related to the Chatrooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.room { grid-area: room; }
+.chat { grid-area: chat; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'room chat chat';
+  grid-gap: 10px;
+}

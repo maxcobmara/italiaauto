@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chatrooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chatrooms.each do |chatroom| %>
+      <tr>
+        <td><%= chatroom.name %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to 'Show', chatroom %></td>
+          <td><%= link_to 'Edit', edit_chatroom_path(chatroom) %></td>
+          <td><%= link_to 'Destroy', chatroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <td><%= link_to 'Join', chatroom_chatroom_users_path(chatroom), method: :post %></td>
+        <td><%= link_to 'Leave', chatroom_chatroom_users_path(chatroom), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if current_user.admin? %>
+  <%= link_to 'New Chatroom', new_chatroom_path %>
+<% end %>
+
+<% if current_user.chatroom_users %>
+<H3> My rooms </H3>
+<ul>
+  <% current_user.chatrooms.each do | room | %>
+    <li><%= link_to room.name, room %></li>
+  <% end %>
+</ul>
+<% end %>
