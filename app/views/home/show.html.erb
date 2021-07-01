@@ -8,6 +8,9 @@
   <table class="icongrid">
     <tr>
       <td><%= link_to (content_tag(:i, "", class: 'fas fa-car fa-2x') + ""), thredded.root_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Forum" %></td>
+      <% if current_user %>
+      <td><%= link_to (content_tag(:i, "", class: 'fa fa-telegram fa-2x') + ""), "https://t.me/joinchat/n5be2NbrMf5kODM1", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Telegram" %></td>
+      <% end -%>
       <td><%= link_to (content_tag(:i, "", class: 'fas fa-comments fa-2x') + ""), chatrooms_path, class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Chat"  %></td>
       <td><%= link_to (content_tag(:i, "", class: 'fab fa-tumblr-square fa-2x') + ""), "https://italiaauto.tumblr.com", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Tumblr" %></td>
       <td><%= link_to (content_tag(:i, "", class: 'fab fa-facebook fa-2x') + ""), "https://www.facebook.com/ItaliaAutoClub/", target: "_blank", class: "button", data: {tooltip: "", position: "bottom", alignment: "center"}, tabindex: "1",  title: "Facebook" %></td>
