@@ -211,7 +211,7 @@ GEM
       html2markdown
       htmlentities
     public_suffix (4.0.1)
-    puma (4.3.9)
+    puma (4.3.11)
       nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
@@ -387,7 +387,7 @@ DEPENDENCIES
   mina-puma
   pg (>= 0.18, < 2.0)
   plain-david (~> 1.1.0)
-  puma (~> 4.3.9)
+  puma (~> 4.3.11)
   rails (~> 5.2.3)
   rails-timeago (~> 2.17.1)
   rails_email_preview (~> 2.2.1)
